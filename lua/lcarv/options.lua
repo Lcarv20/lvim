@@ -2,12 +2,13 @@ lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
 -- lvim.colorscheme = "kanagawa"
 -- lvim.colorscheme = "synthwave84"
-lvim.colorscheme = "lunar"
+-- lvim.colorscheme = "lunar"
+-- lvim.colorscheme = "tokyo-night"
 lvim.lsp.diagnostics.float.focusable = true
 lvim.builtin.theme.lunar.options.dim_inactive = false
 lvim.reload_config_on_save = false
-lvim.builtin.illuminate.active = false
-lvim.builtin.theme.lunar.options.style = "night"
+lvim.builtin.illuminate.active = true
+-- lvim.builtin.theme.lunar.options.style = "night"
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
@@ -16,6 +17,7 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.breadcrumbs.active = true
 lvim.builtin.treesitter.highlight.enabled = true
 lvim.builtin.dap.active = true
+lvim.builtin.terminal.direction = "tab"
 -- lvim.keys.term_mode = { ["<C-l>"] = false }
 -- lvim.builtin.cmp.cmdline.enable = false
 lvim.builtin.cmp.window.documentation = {
@@ -70,7 +72,6 @@ vim.opt.showtabline = 0
 -- vim.opt.isfname:append("@-@")
 
 -- vim.opt.updatetime = 50
-
 -- vim.opt.colorcolumn = "80"
 local options = {
   backup = false, -- creates a backup file

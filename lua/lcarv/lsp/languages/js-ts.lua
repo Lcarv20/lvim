@@ -66,6 +66,6 @@ end
 -- Set a linter.
 local linters = require("lvim.lsp.null-ls.linters")
 linters.setup({
-  { command = "eslint", filetypes = { "javascript", "typescript" } },
+  { command = "eslint", filetypes = { "javascript", "typescript", "svelte" } },
 })
 

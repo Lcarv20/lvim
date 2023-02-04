@@ -3,6 +3,8 @@ if not status_ok then
   return
 end
 
+-- TODO: change keymap C which is currently chatgpt (I have to change maybe chatgpt to a less relevant one)
+
 local opts = {
   mode = "n", -- NORMAL mode
   prefix = "<leader>",

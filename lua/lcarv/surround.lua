@@ -7,7 +7,7 @@ surround.setup {
   keymaps = {
     insert = "<C-g>s",
     insert_line = "<C-g>S",
-    normal = "s",
+    normal = "ys",
     normal_cur = "yss",
     normal_line = "yS",
     normal_cur_line = "ySS",

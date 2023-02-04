@@ -30,10 +30,11 @@ lvim.builtin.which_key.mappings["x"] = {
   u = { "<cmd>lua require'dapui'.toggle()<cr>", "UI" },
   x = { "<cmd>lua require'dap'.terminate()<cr>", "Exit" },
 }
+
 lvim.builtin.which_key.mappings["f"] = {
   name = "Find",
   b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-  c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
+  c = {"<cmd>Telescope colorscheme<cr>", "Colorscheme"},
   f = { "<cmd>Telescope find_files<cr>", "Find files" },
   t = { "<cmd>Telescope live_grep<cr>", "Find Text" },
   s = { "<cmd>Telescope grep_string<cr>", "Find String" },
@@ -84,8 +85,8 @@ lvim.builtin.which_key.mappings["g"] = {
 lvim.builtin.which_key.mappings["l"] = {
   name = "LSP",
   a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-  c = { "<cmd>lua require('copilot.suggestion').toggle_auto_trigger()<cr>", "Get Capabilities" },
-  -- c = { "<cmd>lua require('lcarv.lsp').server_capabilities()<cr>", "Get Capabilities" },
+  -- c = { "<cmd>lua require('copilot.suggestion').toggle_auto_trigger()<cr>", "Get Capabilities" },
+  -- c = { "<cmd>lua require('lsp').server_capabilities()<cr>", "Get Capabilities!" },
   d = { "<cmd>TroubleToggle<cr>", "Diagnostics" },
   w = {
     "<cmd>Telescope lsp_workspace_diagnostics<cr>",
@@ -95,7 +96,7 @@ lvim.builtin.which_key.mappings["l"] = {
   F = { "<cmd>LspToggleAutoFormat<cr>", "Toggle Autoformat" },
   i = { "<cmd>LspInfo<cr>", "Info" },
   h = { "<cmd>lua require('lsp-inlayhints').toggle()<cr>", "Toggle Hints" },
-  H = { "<cmd>IlluminationToggle<cr>", "Toggle Doc HL" },
+  H = { "<cmd>IlluminateToggle<cr>", "Toggle Doc HL" },
   I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
   j = {
     "<cmd>lua vim.diagnostic.goto_next({buffer=0})<CR>",
@@ -108,7 +109,7 @@ lvim.builtin.which_key.mappings["l"] = {
   v = { "<cmd>lua require('lsp_lines').toggle()<cr>", "Virtual Text" },
   l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
   o = { "<cmd>SymbolsOutline<cr>", "Outline" },
-  q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
+  q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
   r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
   R = { "<cmd>TroubleToggle lsp_references<cr>", "References" },
   s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
@@ -151,12 +152,29 @@ lvim.builtin.which_key.mappings["o"] = {
 --   p = { "<cmd>Telekasten panel<cr>", "Panel" },
 --   t = { "<cmd>Telekasten toggle_todo<cr>", "Toggle Todo" },
 -- }
+lvim.builtin.which_key.mappings[";"] = nil
 
 lvim.builtin.which_key.mappings[";"] = nil
+lvim.builtin.which_key.mappings["d"] = nil
+
+-- TODO: refactor code on keymaps, which-key and lvim.keys
+lvim.keys.visual_mode['<leader>p'] = [["_dP]]
+lvim.keys.normal_mode['<leader>y'] = [["+y]]
+lvim.keys.visual_mode['<leader>y'] = [["+y]]
+lvim.keys.normal_mode['<leader>Y'] = [["+Y]]
+lvim.keys.normal_mode['<leader>d'] = [["_d]]
+lvim.keys.visual_mode['<leader>d'] = [["_d]]
+lvim.keys.normal_mode['<leader>s'] = false
+-- lvim.keys.normal_mode['<leader>s'] = [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]
+lvim.builtin.which_key.mappings["d"] = {"Delete to Void"}
+lvim.builtin.which_key.mappings["y"] = { "Copy to Clipboard" }
+lvim.builtin.which_key.mappings["Y"] = { "Copy line to Clipboard" }
+lvim.builtin.which_key.mappings["p"] = { "Paste from Clipboard" }
 -- lvim.builtin.which_key.mappings["c"] = nil
 -- lvim.builtin.which_key.mappings["L"] = nil
 lvim.builtin.which_key.mappings["s"] = nil
 -- lvim.builtin.which_key.mappings["w"] = nil
+lvim.lsp.buffer_mappings.insert_mode['<C-h>'] = { vim.lsp.buf.signature_help, "Signature help" }
 
 local m_opts = {
   mode = "n", -- NORMAL mode
@@ -179,11 +197,11 @@ local m_mappings = {
   m = { '<cmd>lua require("harpoon.mark").add_file()<cr>', "Add2Harpoon" },
   -- ["."] = { '<cmd>lua require("harpoon.ui").nav_next()<cr>', "Harpoon Next" },
   -- [","] = { '<cmd>lua require("harpoon.ui").nav_prev()<cr>', "Harpoon Prev" },
-  l = { "<cmd>lua require('lcarv.bfs').open()<cr>", "Buffers" },
+  -- l = { "<cmd>lua require('lcarv.bfs').open()<cr>", "Buffers" },
   j = { "<cmd>silent BookmarkNext<cr>", "Next" },
   s = { "<cmd>Telescope harpoon marks<cr>", "Search Files" },
   k = { "<cmd>silent BookmarkPrev<cr>", "Prev" },
-  S = { "<cmd>silent BookmarkShowAll<cr>", "Prev" },
+  S = { "<cmd>silent BookmarkShowAll<cr>", "Preview" },
   -- s = {
   --   "<cmd>lua require('telescope').extensions.vim_bookmarks.all({ hide_filename=false, prompt_title=\"bookmarks\", shorten_path=false })<cr>",
   --   "Show",

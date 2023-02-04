@@ -7,8 +7,8 @@ local opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
 
 keymap("n", "<C-Space>", "<cmd>WhichKey \\<space><cr>", opts)
-keymap("n", "<C-i>", "<C-i>", opts)
 keymap("n", "<m-tab>", "<c-6>", opts)
+keymap("i", "jj", "<ESC>", opts)
 
 function _G.set_terminal_keymaps()
   vim.api.nvim_buf_set_keymap(0, "t", "<m-h>", [[<C-\><C-n><C-W>h]], opts)
@@ -18,10 +18,6 @@ function _G.set_terminal_keymaps()
 end
 
 vim.cmd "autocmd! TermOpen term://* lua set_terminal_keymaps()"
-
--- use r for s
-keymap("n", "r", "s", opts)
-keymap("s", "r", "s", opts)
 
 -- Scroll
 keymap("n", "<C-d>", "<C-d>zz", opts)
@@ -35,7 +31,7 @@ keymap("n", "#", "#zz", opts)
 keymap("n", "g*", "g*zz", opts)
 keymap("n", "g#", "g#zz", opts)
 
--- Hold cursor positio 
+-- Hold cursor position
 keymap("n", "J", "mzJ`z", opts)
 
 keymap("n", "<C-z>", "<cmd>ZenMode<cr>", opts)
@@ -43,14 +39,21 @@ keymap("n", "-", ":lua require'lir.float'.toggle()<cr>", opts)
 keymap("n", "gx", [[:silent execute '!$BROWSER ' . shellescape(expand('<cfile>'), 1)<CR>]], opts)
 keymap("n", "<m-v>", "<cmd>lua require('lsp_lines').toggle()<cr>", opts)
 
+-- lvim.builtin.which_key.mappings["d"] = {
+--   name = "ChatGPT",
+--   c = { "<cmd>ChatGPT<cr>", "Chat" },
+--   a = { "<cmd>ChatGPTActAs<cr>", "Act As" },
+--   e = { "<cmd>ChatGPTEditWithInstructions<cr>", "Edit" },
+--   r = { "<cmd>ChatRunCustomCodeAction<cr>", "Code Action" },
+-- }
 
 -- To add to clipboard
-keymap("x", "<leader>p", [["_dP]])
-keymap("n", "Q", "<cmd>Bdelete!<CR>")
-keymap({"n", "v"}, "<leader>y", [["+y]])
-keymap("n", "<leader>Y", [["+Y]])
-keymap({"n", "v"}, "<leader>d", [["_d]])
-keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+-- keymap("x", "<leader>p", [["_dP]])
+-- keymap("n", "Q", "<cmd>Bdelete!<CR>")
+-- keymap({ "n", "v" }, "<leader>y", [["+y]])
+-- keymap("n", "<leader>Y", [["+Y]])
+-- keymap({ "n", "v" }, "<leader>d", [["_d]])
+-- keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts)
 
 -- Visual --
 -- Stay in indent mode

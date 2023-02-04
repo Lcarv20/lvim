@@ -3,6 +3,7 @@
 -- }
 lvim.plugins = {
   "rebelot/kanagawa.nvim",
+  'folke/tokyonight.nvim',
   "ellisonleao/gruvbox.nvim",
   "LunarVim/synthwave84.nvim",
   "roobert/tailwindcss-colorizer-cmp.nvim",
@@ -72,6 +73,11 @@ lvim.plugins = {
   {
     "0x100101/lab.nvim",
     build = "cd js && npm ci && npm audit fix",
+  },
+  {
+    "ray-x/lsp_signature.nvim",
+    event = "BufRead",
+    config = function() require "lsp_signature".on_attach() end,
   },
   -- { "tzachar/cmp-tabnine", build = "./install.sh" },
   -- {
