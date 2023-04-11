@@ -4,6 +4,9 @@ lvim.format_on_save.enabled = false
 -- lvim.colorscheme = "synthwave84"
 -- lvim.colorscheme = "lunar"
 -- lvim.colorscheme = "tokyo-night"
+lvim.colorscheme = "rose-pine"
+-- lvim.colorscheme = "oxocarbon"
+-- lvim.colorscheme = "darkplus"
 lvim.lsp.diagnostics.float.focusable = true
 lvim.builtin.theme.lunar.options.dim_inactive = false
 lvim.reload_config_on_save = false
@@ -28,21 +31,21 @@ lvim.builtin.cmp.window.completion = {
   border = "rounded",
   winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
 }
-lvim.builtin.cmp.formatting.source_names = {
-  nvim_lsp = "",
-  emoji = "",
-  path = "",
-  calc = "",
-  cmp_tabnine = "",
-  vsnip = "",
-  luasnip = "",
-  buffer = "",
-  tmux = "",
-  copilot = "",
-  treesitter = "",
-}
+-- lvim.builtin.cmp.formatting.source_names = {
+--   nvim_lsp = "",
+--   emoji = "",
+--   path = "",
+--   calc = "",
+--   cmp_tabnine = "(tabnine)",
+--   vsnip = "",
+--   luasnip = "",
+--   buffer = "",
+--   tmux = "",
+--   copilot = "",
+--   treesitter = "",
+-- }
 lvim.builtin.cmp.formatting = {
-    format = require("tailwindcss-colorizer-cmp").formatter
+  format = require("tailwindcss-colorizer-cmp").formatter,
 }
 vim.opt.showtabline = 0
 
@@ -140,4 +143,3 @@ vim.filetype.add {
     conf = "dosini",
   },
 }
-

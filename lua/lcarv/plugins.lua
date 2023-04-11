@@ -1,19 +1,16 @@
--- lvim.plugins = {
---     -- "rcarriga/nvim-dap-ui"
--- }
 lvim.plugins = {
+  { "rose-pine/neovim", name = "rose-pine" },
+  "jacoborus/tender.vim",
+  "nyoom-engineering/oxocarbon.nvim",
   "rebelot/kanagawa.nvim",
-  'folke/tokyonight.nvim',
   "ellisonleao/gruvbox.nvim",
   "LunarVim/synthwave84.nvim",
   "roobert/tailwindcss-colorizer-cmp.nvim",
   "lunarvim/github.nvim",
   "nvim-treesitter/playground",
   "nvim-treesitter/nvim-treesitter-textobjects",
-  "christianchiarulli/nvim-ts-rainbow",
   "mfussenegger/nvim-jdtls",
   "LunarVim/Colorschemes",
-  -- "karb94/neoscroll.nvim",
   "opalmay/vim-smoothie",
   "j-hui/fidget.nvim",
   "christianchiarulli/nvim-ts-autotag",
@@ -21,7 +18,6 @@ lvim.plugins = {
   "christianchiarulli/harpoon",
   "MattesGroeger/vim-bookmarks",
   "NvChad/nvim-colorizer.lua",
-  -- "ghillb/cybu.nvim",
   "moll/vim-bbye",
   "folke/todo-comments.nvim",
   "windwp/nvim-spectre",
@@ -47,7 +43,7 @@ lvim.plugins = {
   "petertriho/nvim-scrollbar",
   {
     "saecki/crates.nvim",
-    version = "v0.3.0",
+    version = "*",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       require("crates").setup {
@@ -69,7 +65,7 @@ lvim.plugins = {
     end,
   },
   { "christianchiarulli/telescope-tabs", branch = "chris" },
-  'nvim-telescope/telescope-media-files.nvim',
+  "nvim-telescope/telescope-media-files.nvim",
   {
     "0x100101/lab.nvim",
     build = "cd js && npm ci && npm audit fix",
@@ -77,31 +73,69 @@ lvim.plugins = {
   {
     "ray-x/lsp_signature.nvim",
     event = "BufRead",
-    config = function() require "lsp_signature".on_attach() end,
+    config = function()
+      require("lsp_signature").on_attach()
+    end,
   },
-  -- { "tzachar/cmp-tabnine", build = "./install.sh" },
+  {
+    "folke/trouble.nvim",
+    dependencies = "nvim-tree/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {}
+    end,
+  },
+  {
+    "codota/tabnine-nvim",
+    -- event = "InsertEnter",
+    config = function()
+      require("tabnine").setup {
+        disable_auto_comment = true,
+        accept_keymap = "<Tab>",
+        dismiss_keymap = "<C-]>",
+        debounce_ms = 800,
+        suggestion_color = { gui = "#808080", cterm = 244 },
+        exclude_filetypes = { "TelescopePrompt" },
+      }
+    end,
+    build = "./dl_binaries.sh",
+  },
   -- {
-  --     "zbirenbaum/copilot.lua",
-  --     -- event = { "VimEnter" },
-  --     config = function()
-  --         vim.defer_fn(function()
-  --             require("copilot").setup {
-  --                 plugin_manager_path = os.getenv "LUNARVIM_RUNTIME_DIR" .. "/site/pack/packer",
-  --             }
-  --         end, 100)
-  --     end,
+  --   "tzachar/cmp-tabnine",
+  --   event = "InsertEnter",
+  --   after = "nvim-cmp",
+  --   dependencies = "hrsh7th/nvim-cmp",
+  --   build = "./install.sh",
   -- },
-  -- {
-  --     "zbirenbaum/copilot-cmp",
-  --     after = { "copilot.lua" },
-  --     config = function()
-  --         require("copilot_cmp").setup {
-  --             formatters = {
-  --                 insert_text = require("copilot_cmp.format").remove_existing,
-  --             },
-  --         }
-  --     end,
-  -- },
+  "simrat39/symbols-outline.nvim",
+  {
+    "akinsho/flutter-tools.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "stevearc/dressing.nvim",
+    },
+  },
+  {
+    "zbirenbaum/copilot.lua",
+    -- event = { "VimEnter" },
+    config = function()
+      vim.defer_fn(function()
+        require("copilot").setup {
+          plugin_manager_path = os.getenv "LUNARVIM_RUNTIME_DIR" .. "/site/pack/packer",
+        }
+      end, 100)
+    end,
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function()
+      require("copilot_cmp").setup {
+        formatters = {
+          insert_text = require("copilot_cmp.format").remove_existing,
+        },
+      }
+    end,
+  },
   -- "MunifTanjim/nui.nvim",
   -- {
   --   "folke/noice.nvim",
