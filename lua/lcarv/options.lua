@@ -1,12 +1,19 @@
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
+-- lvim.colorscheme = "onedark"
+-- lvim.colorscheme = "vscode"
+-- lvim.colorscheme = "catppuccin"
 -- lvim.colorscheme = "kanagawa"
+-- lvim.colorscheme = "carbonfox"
+-- lvim.colorscheme = "duskfox"
 -- lvim.colorscheme = "synthwave84"
+-- lvim.colorscheme = "tokyonight-night"
 -- lvim.colorscheme = "lunar"
--- lvim.colorscheme = "tokyo-night"
-lvim.colorscheme = "rose-pine"
+-- lvim.colorscheme = "rose-pine"
 -- lvim.colorscheme = "oxocarbon"
 -- lvim.colorscheme = "darkplus"
+lvim.colorscheme = "github"
+
 lvim.lsp.diagnostics.float.focusable = true
 lvim.builtin.theme.lunar.options.dim_inactive = false
 lvim.reload_config_on_save = false
@@ -16,34 +23,39 @@ lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
+lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
 lvim.builtin.breadcrumbs.active = true
 lvim.builtin.treesitter.highlight.enabled = true
 lvim.builtin.dap.active = true
-lvim.builtin.terminal.direction = "tab"
+-- lvim.builtin.terminal.direction = "tab"
+lvim.builtin.terminal.direction = "horizontal"
 -- lvim.keys.term_mode = { ["<C-l>"] = false }
 -- lvim.builtin.cmp.cmdline.enable = false
 lvim.builtin.cmp.window.documentation = {
-  border = "rounded",
+  border = "solid",
   winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
 }
 lvim.builtin.cmp.window.completion = {
-  border = "rounded",
+  border = "none",
   winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
 }
--- lvim.builtin.cmp.formatting.source_names = {
---   nvim_lsp = "",
---   emoji = "",
---   path = "",
---   calc = "",
---   cmp_tabnine = "(tabnine)",
---   vsnip = "",
---   luasnip = "",
---   buffer = "",
---   tmux = "",
---   copilot = "",
---   treesitter = "",
--- }
+
+-- lvim.builtin.telescope.theme = "ivy"
+
+lvim.builtin.cmp.formatting.source_names = {
+  nvim_lsp = "(lsp)",
+  emoji = "(emoji)",
+  path = "(path)",
+  calc = "(calc)",
+  cmp_tabnine = "(tabnine)",
+  vsnip = "(vsnip)",
+  luasnip = "(luasnip)",
+  buffer = "(buffer)",
+  tmux = "(tmux)",
+  copilot = "(copilot)",
+  treesitter = "(treesitter)",
+  cmp_clippy = "(clippy)",
+}
 lvim.builtin.cmp.formatting = {
   format = require("tailwindcss-colorizer-cmp").formatter,
 }
@@ -136,7 +148,7 @@ end
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
-vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+-- vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
 vim.filetype.add {
   extension = {

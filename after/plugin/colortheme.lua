@@ -34,4 +34,3 @@ kanagawa.setup {
   end,
 }
 -- vim.cmd[[colorscheme kanagawa-dragon]]
-

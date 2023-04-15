@@ -26,5 +26,5 @@ local mappings = {
 
 which_key.register(mappings, opts)
 
-lvim.lsp.buffer_mappings.normal_mode['H'] = { vim.lsp.buf.hover, "Show documentation" }
+-- lvim.lsp.buffer_mappings.normal_mode['H'] = { vim.lsp.buf.hover, "Show documentation" }
 

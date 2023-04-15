@@ -68,11 +68,11 @@ require("chatgpt").setup {
   },
 }
 
-local opts = { noremap = true, silent = true }
+-- local opts = { noremap = true, silent = true }
 
-local keymap = vim.keymap.set
+-- local keymap = vim.keymap.set
 
-keymap("n", "<c-p>", "<cmd>ChatGPT<cr>", opts)
+-- keymap("n", "<c-p>", "<cmd>ChatGPT<cr>", opts)
 
 -- <C-c> to close chat window.
 -- <C-u> scroll up chat window.
