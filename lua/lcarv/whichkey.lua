@@ -11,13 +11,21 @@ lvim.builtin.which_key.mappings["r"] = {
   w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
   f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace Buffer" },
 }
-lvim.builtin.which_key.mappings["C"] = {
-  name = "ChatGPT",
-  c = { "<cmd>ChatGPT<cr>", "Chat" },
-  a = { "<cmd>ChatGPTActAs<cr>", "Act As" },
-  e = { "<cmd>ChatGPTEditWithInstructions<cr>", "Edit" },
-  r = { "<cmd>ChatRunCustomCodeAction<cr>", "Code Action" },
+lvim.builtin.which_key.mappings["a"] = {
+  name = "[AI] ChatGPT",
+  c = { "<cmd>NeoAIToggle<cr>", "Toggle Chat" },
+  p = { "<cmd>put c<cr>", "Paste Code" },
+  P = { "<cmd>put g<cr>", "Paste Response" },
+  B = { "<cmd>NeoAIInject", "In Buffer Response"},
+  b = { "<cmd>NeoAIInjectCode", "In Buffer Code Response"},
 }
+lvim.builtin.which_key.vmappings["a"] = {
+  name = "[AI] ChatGPT",
+  c = { "<cmd>NeoAIContext<cr>", "Chat Context" },
+  i = { "<cmd>NeoAIInjectContext<cr>", "Generate Context" },
+  g = { "<cmd>NeoAIInjectContextCode<cr>", "Generate Code" },
+}
+
 lvim.builtin.which_key.mappings["x"] = {
   name = "Debug",
   b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Breakpoint" },

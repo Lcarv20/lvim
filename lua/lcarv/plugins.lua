@@ -1,6 +1,6 @@
 lvim.plugins = {
   -- Colorschemes
-  { "RRethy/nvim-base16" },
+  -- { "RRethy/nvim-base16" },
   {
     "navarasu/onedark.nvim",
     config = function()
@@ -37,7 +37,6 @@ lvim.plugins = {
   "ellisonleao/gruvbox.nvim",
   "LunarVim/synthwave84.nvim",
   "lunarvim/github.nvim",
-
   "roobert/tailwindcss-colorizer-cmp.nvim",
   "nvim-treesitter/playground",
   "nvim-treesitter/nvim-treesitter-textobjects",
@@ -82,7 +81,34 @@ lvim.plugins = {
     end,
   },
   "MunifTanjim/nui.nvim",
-  "jackMort/ChatGPT.nvim",
+  {
+    "Bryley/neoai.nvim",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+    },
+    cmd = {
+      "NeoAI",
+      "NeoAIOpen",
+      "NeoAIClose",
+      "NeoAIToggle",
+      "NeoAIContext",
+      "NeoAIContextOpen",
+      "NeoAIContextClose",
+      "NeoAIInject",
+      "NeoAIInjectCode",
+      "NeoAIInjectContext",
+      "NeoAIInjectContextCode",
+    },
+    keys = {
+      { "<leader>ca", desc = "Summarize Text" },
+      { "<leader>gG", desc = "Generate Git Message (cautioun w/ price)" },
+    },
+    -- config = function()
+    --   require("neoai").setup {
+    --     -- Options go here
+    --   }
+    -- end,
+  },
   {
     "jinh0/eyeliner.nvim",
     config = function()
@@ -159,11 +185,6 @@ lvim.plugins = {
   --     }
   --   end,
   -- },
-  -- {
-  --   "vappolinario/cmp-clippy",
-  --   event = { "InsertEnter" },
-  --   dependencies = { "nvim-lua/plenary.nvim" },
-  -- },
   {
     "Exafunction/codeium.vim",
     -- config = function ()
@@ -174,4 +195,30 @@ lvim.plugins = {
     --   vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
     -- end
   },
+  "Bryley/neoai.nvim",
+  dependencies = {
+    "MunifTanjim/nui.nvim",
+  },
+  cmd = {
+    "NeoAI",
+    "NeoAIOpen",
+    "NeoAIClose",
+    "NeoAIToggle",
+    "NeoAIContext",
+    "NeoAIContextOpen",
+    "NeoAIContextClose",
+    "NeoAIInject",
+    "NeoAIInjectCode",
+    "NeoAIInjectContext",
+    "NeoAIInjectContextCode",
+  },
+  keys = {
+    { "<leader>as", desc = "summarize text" },
+    { "<leader>ag", desc = "generate git message" },
+  },
+  config = function()
+    require("neoai").setup {
+      -- Options go here
+    }
+  end,
 }

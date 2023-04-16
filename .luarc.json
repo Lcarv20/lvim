@@ -17,6 +17,11 @@
         "/Users/lcarv/.local/share/lunarvim/site/pack/lazy/opt/telescope.nvim/lua",
         "${3rd}/luv/library"
     ],
+    "diagnostics.globals": [
+        "vim",
+        "lvim",
+        "reload",
+    ],
 }
 
 

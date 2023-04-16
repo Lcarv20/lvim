@@ -8,11 +8,11 @@ lvim.format_on_save.enabled = false
 -- lvim.colorscheme = "duskfox"
 -- lvim.colorscheme = "synthwave84"
 -- lvim.colorscheme = "tokyonight-night"
--- lvim.colorscheme = "lunar"
+lvim.colorscheme = "lunar"
 -- lvim.colorscheme = "rose-pine"
 -- lvim.colorscheme = "oxocarbon"
 -- lvim.colorscheme = "darkplus"
-lvim.colorscheme = "github"
+-- lvim.colorscheme = "github"
 
 lvim.lsp.diagnostics.float.focusable = true
 lvim.builtin.theme.lunar.options.dim_inactive = false
