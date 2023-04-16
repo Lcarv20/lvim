@@ -16,8 +16,8 @@ lvim.builtin.which_key.mappings["a"] = {
   c = { "<cmd>NeoAIToggle<cr>", "Toggle Chat" },
   p = { "<cmd>put c<cr>", "Paste Code" },
   P = { "<cmd>put g<cr>", "Paste Response" },
-  B = { "<cmd>NeoAIInject", "In Buffer Response"},
-  b = { "<cmd>NeoAIInjectCode", "In Buffer Code Response"},
+  B = { [[:NeoAIInject ]], "In Buffer Response"},
+  b = { ":NeoAIInjectCode", "In Buffer Code Response"},
 }
 lvim.builtin.which_key.vmappings["a"] = {
   name = "[AI] ChatGPT",
@@ -143,6 +143,9 @@ lvim.builtin.which_key.mappings["o"] = {
   name = "Options",
   c = { "<cmd>lua lvim.builtin.cmp.active = false<cr>", "Completion off" },
   C = { "<cmd>lua lvim.builtin.cmp.active = true<cr>", "Completion on" },
+  r = { ":Lab code run<cr>", "Lab Code Run" },
+  s = { ":Lab code stop<cr>", "Lab Code Stop" },
+  l = { ":Lab code panel<cr>", "Lab Code Panel" },
   -- w = { '<cmd>lua require("lcarv.functions").toggle_option("wrap")<cr>', "Wrap" },
   -- r = { '<cmd>lua require("lcarv.functions").toggle_option("relativenumber")<cr>', "Relative" },
   -- l = { '<cmd>lua require("lcarv.functions").toggle_option("cursorline")<cr>', "Cursorline" },

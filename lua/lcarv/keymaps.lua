@@ -42,14 +42,6 @@ keymap("n", "<m-v>", "<cmd>lua require('lsp_lines').toggle()<cr>", opts)
 keymap("n", "[d", function() vim.diagnostic.goto_prev { buffer = 0 } end, opts)
 keymap("n", "]d", function() vim.diagnostic.goto_next { buffer = 0 } end, opts)
 
--- lvim.builtin.which_key.mappings["d"] = {
---   name = "ChatGPT",
---   c = { "<cmd>ChatGPT<cr>", "Chat" },
---   a = { "<cmd>ChatGPTActAs<cr>", "Act As" },
---   e = { "<cmd>ChatGPTEditWithInstructions<cr>", "Edit" },
---   r = { "<cmd>ChatRunCustomCodeAction<cr>", "Code Action" },
--- }
-
 -- To add to clipboard
 -- keymap("x", "<leader>p", [["_dP]])
 -- keymap("n", "Q", "<cmd>Bdelete!<CR>")

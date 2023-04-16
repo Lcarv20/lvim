@@ -1,6 +1,6 @@
 lvim.plugins = {
   -- Colorschemes
-  -- { "RRethy/nvim-base16" },
+  { "RRethy/nvim-base16" },
   {
     "navarasu/onedark.nvim",
     config = function()
@@ -42,6 +42,10 @@ lvim.plugins = {
   "nvim-treesitter/nvim-treesitter-textobjects",
   "mfussenegger/nvim-jdtls",
   -- "opalmay/vim-smoothie",
+  {
+    "0x100101/lab.nvim",
+    build = "cd js && npm ci",
+  },
   "j-hui/fidget.nvim",
   "christianchiarulli/nvim-ts-autotag",
   "kylechui/nvim-surround",
@@ -103,11 +107,6 @@ lvim.plugins = {
       { "<leader>ca", desc = "Summarize Text" },
       { "<leader>gG", desc = "Generate Git Message (cautioun w/ price)" },
     },
-    -- config = function()
-    --   require("neoai").setup {
-    --     -- Options go here
-    --   }
-    -- end,
   },
   {
     "jinh0/eyeliner.nvim",
@@ -163,28 +162,6 @@ lvim.plugins = {
       "stevearc/dressing.nvim",
     },
   },
-  -- {
-  --   "zbirenbaum/copilot.lua",
-  --   -- event = { "VimEnter" },
-  --   config = function()
-  --     vim.defer_fn(function()
-  --       require("copilot").setup {
-  --         plugin_manager_path = os.getenv "LUNARVIM_RUNTIME_DIR" .. "/site/pack/packer",
-  --       }
-  --     end, 100)
-  --   end,
-  -- },
-  -- {
-  --   "zbirenbaum/copilot-cmp",
-  --   after = { "copilot.lua" },
-  --   config = function()
-  --     require("copilot_cmp").setup {
-  --       formatters = {
-  --         insert_text = require("copilot_cmp.format").remove_existing,
-  --       },
-  --     }
-  --   end,
-  -- },
   {
     "Exafunction/codeium.vim",
     -- config = function ()
@@ -195,30 +172,4 @@ lvim.plugins = {
     --   vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
     -- end
   },
-  "Bryley/neoai.nvim",
-  dependencies = {
-    "MunifTanjim/nui.nvim",
-  },
-  cmd = {
-    "NeoAI",
-    "NeoAIOpen",
-    "NeoAIClose",
-    "NeoAIToggle",
-    "NeoAIContext",
-    "NeoAIContextOpen",
-    "NeoAIContextClose",
-    "NeoAIInject",
-    "NeoAIInjectCode",
-    "NeoAIInjectContext",
-    "NeoAIInjectContextCode",
-  },
-  keys = {
-    { "<leader>as", desc = "summarize text" },
-    { "<leader>ag", desc = "generate git message" },
-  },
-  config = function()
-    require("neoai").setup {
-      -- Options go here
-    }
-  end,
 }
