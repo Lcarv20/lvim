@@ -129,6 +129,7 @@ lvim.builtin.telescope.defaults = {
   --   results = { " ", " ", " ", " ", " ", " ", " ", " " },
   --   preview = { " ", " ", " ", "▏", "▏", " ", " ", "▏" },
   -- },
+  winblend = 20,
   layout_strategy = "horizontal",
   show_line = false,
   layout_config = {
@@ -173,9 +174,9 @@ lvim.builtin.telescope.pickers.planets = {
   show_moon = true,
 }
 
--- lvim.builtin.telescope.pickers.colorscheme = {
---   enable_preview = true,
--- }
+lvim.builtin.telescope.pickers.colorscheme = {
+  enable_preview = true,
+}
 
 -- lvim.builtin.telescope.pickers.lsp_references = {
 --   theme = "dropdown",
