@@ -39,8 +39,12 @@ keymap("n", "-", ":lua require'lir.float'.toggle()<cr>", opts)
 keymap("n", "gx", [[:silent execute '!$BROWSER ' . shellescape(expand('<cfile>'), 1)<CR>]], opts)
 keymap("n", "<m-v>", "<cmd>lua require('lsp_lines').toggle()<cr>", opts)
 
-keymap("n", "[d", function() vim.diagnostic.goto_prev { buffer = 0 } end, opts)
-keymap("n", "]d", function() vim.diagnostic.goto_next { buffer = 0 } end, opts)
+keymap("n", "[d", function()
+  vim.diagnostic.goto_prev { buffer = 0 }
+end, opts)
+keymap("n", "]d", function()
+  vim.diagnostic.goto_next { buffer = 0 }
+end, opts)
 
 -- To add to clipboard
 -- keymap("x", "<leader>p", [["_dP]])

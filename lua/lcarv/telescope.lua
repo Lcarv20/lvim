@@ -65,15 +65,12 @@ lvim.builtin.telescope.defaults.mappings = {
     -- ["<C-f>"] = actions.results_scrolling_down,
 
     ["<C-c>"] = actions.close,
-
     ["<Down>"] = actions.move_selection_next,
     ["<Up>"] = actions.move_selection_previous,
-
     ["<CR>"] = actions.select_default,
     ["<C-s>"] = actions.select_horizontal,
     ["<C-v>"] = actions.select_vertical,
     ["<C-t>"] = actions.select_tab,
-
     -- ["<c-d>"] = require("telescope.actions").delete_buffer,
 
     -- ["<C-u>"] = actions.preview_scrolling_up,
@@ -98,14 +95,12 @@ lvim.builtin.telescope.defaults.mappings = {
     ["<C-t>"] = actions.select_tab,
     ["<C-b>"] = actions.results_scrolling_up,
     ["<C-f>"] = actions.results_scrolling_down,
-
     ["<Tab>"] = actions.close,
     ["<S-Tab>"] = actions.close,
     -- ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
     -- ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
     ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
     ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
-
     ["j"] = actions.move_selection_next,
     ["k"] = actions.move_selection_previous,
     ["H"] = actions.move_to_top,
@@ -116,69 +111,91 @@ lvim.builtin.telescope.defaults.mappings = {
     ["s"] = actions.select_horizontal,
     ["v"] = actions.select_vertical,
     ["t"] = actions.select_tab,
-
     ["<Down>"] = actions.move_selection_next,
     ["<Up>"] = actions.move_selection_previous,
     ["gg"] = actions.move_to_top,
     ["G"] = actions.move_to_bottom,
-
     ["<C-u>"] = actions.preview_scrolling_up,
     ["<C-d>"] = actions.preview_scrolling_down,
-
     ["<PageUp>"] = actions.results_scrolling_up,
     ["<PageDown>"] = actions.results_scrolling_down,
-
     ["?"] = actions.which_key,
   },
 }
 
-lvim.builtin.telescope.pickers.live_grep = {
-  theme = "dropdown",
+lvim.builtin.telescope.defaults = {
+  -- borderchars = {
+  --   prompt = { " ", " ", "―", " ", " ", " ", " ", " " },
+  --   results = { " ", " ", " ", " ", " ", " ", " ", " " },
+  --   preview = { " ", " ", " ", "▏", "▏", " ", " ", "▏" },
+  -- },
+  layout_strategy = "horizontal",
+  show_line = false,
+  layout_config = {
+    height = 0.50,
+    width = 0.85,
+    prompt_position = "top",
+    preview_width = 0.6,
+  },
+  prompt_prefix = " " .. require("lcarv.icons").ui.Search .. " ",
 }
 
-lvim.builtin.telescope.pickers.grep_string = {
-  theme = "dropdown",
+lvim.builtin.telescope.pickers = {
+  diagnostics = {
+    theme = "ivy",
+    -- borderchars = {
+    --   preview = { " ", " ", " ", "▏", "▏", " ", " ", "▏" },
+    -- },
+  },
 }
 
-lvim.builtin.telescope.pickers.find_files = {
-  theme = "dropdown",
-  previewer = false,
-}
+-- lvim.builtin.telescope.pickers.live_grep = {
+--   theme = "dropdown",
+-- }
 
-lvim.builtin.telescope.pickers.buffers = {
-  theme = "dropdown",
-  previewer = false,
-  initial_mode = "normal",
-}
+-- lvim.builtin.telescope.pickers.grep_string = {
+--   theme = "dropdown",
+-- }
+
+-- lvim.builtin.telescope.pickers.find_files = {
+--   theme = "dropdown",
+--   previewer = false,
+-- }
+
+-- lvim.builtin.telescope.pickers.buffers = {
+--   theme = "dropdown",
+--   previewer = false,
+--   initial_mode = "normal",
+-- }
 
 lvim.builtin.telescope.pickers.planets = {
   show_pluto = true,
   show_moon = true,
 }
 
-lvim.builtin.telescope.pickers.colorscheme = {
-  enable_preview = true,
-}
+-- lvim.builtin.telescope.pickers.colorscheme = {
+--   enable_preview = true,
+-- }
 
-lvim.builtin.telescope.pickers.lsp_references = {
-  theme = "dropdown",
-  initial_mode = "normal",
-}
+-- lvim.builtin.telescope.pickers.lsp_references = {
+--   theme = "dropdown",
+--   initial_mode = "normal",
+-- }
 
-lvim.builtin.telescope.pickers.lsp_definitions = {
-  theme = "dropdown",
-  initial_mode = "normal",
-}
+-- lvim.builtin.telescope.pickers.lsp_definitions = {
+--   theme = "dropdown",
+--   initial_mode = "normal",
+-- }
 
-lvim.builtin.telescope.pickers.lsp_declarations = {
-  theme = "dropdown",
-  initial_mode = "normal",
-}
+-- lvim.builtin.telescope.pickers.lsp_declarations = {
+--   theme = "dropdown",
+--   initial_mode = "normal",
+-- }
 
-lvim.builtin.telescope.pickers.lsp_implementations = {
-  theme = "dropdown",
-  initial_mode = "normal",
-}
+-- lvim.builtin.telescope.pickers.lsp_implementations = {
+--   theme = "dropdown",
+--   initial_mode = "normal",
+-- }
 
 require("telescope-tabs").setup {
   show_preview = false,
@@ -188,6 +205,4 @@ require("telescope-tabs").setup {
   -- Your custom config :^)
 }
 
-require('telescope').load_extension('media_files')
-
-
+require("telescope").load_extension "media_files"

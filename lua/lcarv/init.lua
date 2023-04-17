@@ -26,4 +26,4 @@ reload("lcarv.treesitter")
 reload("lcarv.whichkey")
 reload("lcarv.zen-mode")
 reload("lcarv.lsp")
-
+reload("lcarv.neovide-opts")
