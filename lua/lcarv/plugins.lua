@@ -101,7 +101,7 @@ lvim.plugins = {
       "NeoAIInjectContextCode",
     },
     keys = {
-      { "<leader>ca", desc = "Summarize Text" },
+      { "<leader>ar", desc = "Summarize Text" },
       { "<leader>gG", desc = "Generate Git Message (cautioun w/ price)" },
     },
   },
