@@ -87,9 +87,6 @@ lvim.plugins = {
   "MunifTanjim/nui.nvim",
   {
     "Bryley/neoai.nvim",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-    },
     cmd = {
       "NeoAI",
       "NeoAIOpen",
