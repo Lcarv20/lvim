@@ -2,9 +2,9 @@
 
 ![lunarvim + neovide](./screenshot.png "lvim + neovide")
 
-This configuration is stripped from [Chris Chiarulli][https://github.com/ChristianChiarulli/lvim](url).
+This configuration is stripped from [Chris Chiarulli](https://github.com/ChristianChiarulli/lvim).
 
-For more info on how to set up head to [Lunarvim][https://www.lunarvim.org](url), and check the github repo on how to setup a full IDE for specific languages.
+For more info on how to set up head to [Lunarvim](https://www.lunarvim.org), and check the github repo on how to setup a full IDE for specific languages.
 
 ### Using Neovide with Lunarvim
 
