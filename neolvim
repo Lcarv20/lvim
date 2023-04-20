@@ -7,5 +7,12 @@ export LUNARVIM_CACHE_DIR="${LUNARVIM_CACHE_DIR:-"$HOME/.cache/lvim"}"
 
 export LUNARVIM_BASE_DIR="${LUNARVIM_BASE_DIR:-"$HOME/.local/share/lunarvim/lvim"}"
 
-exec neovide --multigrid --maximized -- -u "$LUNARVIM_BASE_DIR/init.lua" "$@"
+# exec neovide --multigrid --maximized -- -u "$LUNARVIM_BASE_DIR/init.lua" "$@"
+# see neovide --help to see what the options mean
+exec neovide  --wsl\
+  --frame=buttonless\
+  --nofork\
+  --multigrid\
+  --geometry=130x45\
+  -- -u "$LUNARVIM_BASE_DIR/init.lua" "$@"
 

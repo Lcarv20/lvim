@@ -164,6 +164,7 @@ lvim.builtin.which_key.mappings["o"] = {
 --   p = { "<cmd>Telekasten panel<cr>", "Panel" },
 --   t = { "<cmd>Telekasten toggle_todo<cr>", "Toggle Todo" },
 -- }
+lvim.builtin.which_key.mappings["u"] = {"<cmd>UndotreeToggle<cr>", "Undotree"}
 lvim.builtin.which_key.mappings[";"] = nil
 
 lvim.builtin.which_key.mappings[";"] = nil

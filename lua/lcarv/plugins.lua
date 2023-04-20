@@ -110,7 +110,7 @@ lvim.plugins = {
     config = function()
       require("eyeliner").setup {
         highlight_on_key = true,
-          -- dim = true,
+        -- dim = true,
       }
     end,
   },
@@ -123,6 +123,7 @@ lvim.plugins = {
       require("lsp_signature").on_attach()
     end,
   },
+  { "mbbill/undotree" },
   {
     "folke/trouble.nvim",
     dependencies = "nvim-tree/nvim-web-devicons",
