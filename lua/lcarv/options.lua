@@ -8,14 +8,15 @@ lvim.format_on_save.enabled = false
 -- lvim.colorscheme = "duskfox"
 -- lvim.colorscheme = "synthwave84"
 -- lvim.colorscheme = "tokyonight-night"
-lvim.colorscheme = "lunar"
+-- lvim.colorscheme = "lunar"
 -- lvim.colorscheme = "base16-tokyodark"
 -- lvim.colorscheme = "base16-tokyo-city-dark"
 -- lvim.colorscheme = "base16-da-one-gray"
 -- lvim.colorscheme = "base16-tokyo-night-terminal-dark"
 -- lvim.colorscheme = "rose-pine"
+-- lvim.colorscheme = "base16-material-darker"
 -- lvim.colorscheme = "oxocarbon"
--- lvim.colorscheme = "darkplus"
+lvim.colorscheme = "darkplus"
 -- lvim.colorscheme = "github"
 
 lvim.lsp.diagnostics.float.focusable = true
@@ -36,11 +37,11 @@ lvim.builtin.terminal.direction = "horizontal"
 -- lvim.keys.term_mode = { ["<C-l>"] = false }
 -- lvim.builtin.cmp.cmdline.enable = false
 lvim.builtin.cmp.window.documentation = {
-  border = "single",
+  border = "rounded",
   winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
 }
 lvim.builtin.cmp.window.completion = {
-  border = "single",
+  border = "rounded",
   winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
 }
 

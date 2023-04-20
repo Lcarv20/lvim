@@ -59,11 +59,11 @@ lvim.builtin.which_key.mappings["f"] = {
 }
 lvim.builtin.which_key.mappings["g"] = {
   name = "Git",
-  -- g = { "<cmd>lua require 'lvim.core.terminal'.lazygit_toggle(12000)<cr>", "Lazygit" },
+  l = { "<cmd>lua require 'lvim.core.terminal'.lazygit_toggle(12000)<cr>", "Lazygit" },
   g = { "<cmd>Neogit<cr>", "Neogit" },
   j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
   k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
-  l = { "<cmd>GitBlameToggle<cr>", "Blame" },
+  b = { "<cmd>GitBlameToggle<cr>", "Blame" },
   p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
   r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
   R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
@@ -74,7 +74,7 @@ lvim.builtin.which_key.mappings["g"] = {
   },
   n = { ":!git checkout -b ", "Checkout New Branch" },
   o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
-  b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+  B = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
   c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
   f = { "<cmd>Telescope git_bcommits<cr>", "Checkout buffer commit" },
   d = {

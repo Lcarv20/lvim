@@ -99,4 +99,14 @@ if vim.g.neovide then
 
   -- for some real reason, the default does not work
   vim.keymap.set("n", "<a-n>", require("illuminate").goto_next_reference, { desc = "Move to next reference" })
+
+  -- disable borders for cmp since neovide buggs on scrolling
+  lvim.builtin.cmp.window.documentation = {
+    border = "none",
+    winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
+  }
+  lvim.builtin.cmp.window.completion = {
+    border = "none",
+    winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
+  }
 end
