@@ -20,9 +20,9 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   },
   callback = function()
     vim.cmd [[
-      nnoremap <silent> <buffer> q :close<CR> 
-      nnoremap <silent> <buffer> <esc> :close<CR> 
-      set nobuflisted 
+      nnoremap <silent> <buffer> q :close<CR>
+      nnoremap <silent> <buffer> <esc> :close<CR>
+      set nobuflisted
     ]]
   end,
 })
@@ -32,8 +32,8 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   callback = function()
     vim.cmd [[
       nnoremap <silent> <buffer> <m-r> :close<CR>
-      " nnoremap <silent> <buffer> <m-r> <NOP> 
-      set nobuflisted 
+      " nnoremap <silent> <buffer> <m-r> <NOP>
+      set nobuflisted
     ]]
   end,
 })
@@ -44,10 +44,10 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
     local buf_ft = vim.bo.filetype
     if buf_ft == "" or buf_ft == nil then
       vim.cmd [[
-      nnoremap <silent> <buffer> q :close<CR> 
-      " nnoremap <silent> <buffer> <c-j> j<CR> 
-      " nnoremap <silent> <buffer> <c-k> k<CR> 
-      set nobuflisted 
+      nnoremap <silent> <buffer> q :close<CR>
+      " nnoremap <silent> <buffer> <c-j> j<CR>
+      " nnoremap <silent> <buffer> <c-k> k<CR>
+      set nobuflisted
     ]]
     end
   end,
@@ -144,3 +144,10 @@ vim.api.nvim_create_autocmd({ "CursorHold" }, {
   end,
 })
 
+vim.api.nvim_create_autocmd("ColorScheme", {
+  pattern = "*",
+  callback = function()
+    vim.api.nvim_set_hl(0, "EyelinerPrimary", { fg = "#ff00ff", bold = true, underline = false })
+    vim.api.nvim_set_hl(0, "EyelinerSecondary", { fg = "#00ffff", underline = false })
+  end,
+})
