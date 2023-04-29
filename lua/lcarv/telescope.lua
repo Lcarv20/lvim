@@ -136,7 +136,7 @@ lvim.builtin.telescope.defaults = {
     height = 0.50,
     width = 0.85,
     prompt_position = "top",
-    preview_width = 0.6,
+    -- preview_width = 0.6,
   },
   prompt_prefix = " " .. require("lcarv.icons").ui.Search .. " ",
 }
@@ -150,24 +150,6 @@ lvim.builtin.telescope.pickers = {
   },
 }
 
--- lvim.builtin.telescope.pickers.live_grep = {
---   theme = "dropdown",
--- }
-
--- lvim.builtin.telescope.pickers.grep_string = {
---   theme = "dropdown",
--- }
-
--- lvim.builtin.telescope.pickers.find_files = {
---   theme = "dropdown",
---   previewer = false,
--- }
-
--- lvim.builtin.telescope.pickers.buffers = {
---   theme = "dropdown",
---   previewer = false,
---   initial_mode = "normal",
--- }
 
 lvim.builtin.telescope.pickers.planets = {
   show_pluto = true,
@@ -177,26 +159,6 @@ lvim.builtin.telescope.pickers.planets = {
 lvim.builtin.telescope.pickers.colorscheme = {
   enable_preview = true,
 }
-
--- lvim.builtin.telescope.pickers.lsp_references = {
---   theme = "dropdown",
---   initial_mode = "normal",
--- }
-
--- lvim.builtin.telescope.pickers.lsp_definitions = {
---   theme = "dropdown",
---   initial_mode = "normal",
--- }
-
--- lvim.builtin.telescope.pickers.lsp_declarations = {
---   theme = "dropdown",
---   initial_mode = "normal",
--- }
-
--- lvim.builtin.telescope.pickers.lsp_implementations = {
---   theme = "dropdown",
---   initial_mode = "normal",
--- }
 
 require("telescope-tabs").setup {
   show_preview = false,
