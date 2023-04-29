@@ -45,4 +45,4 @@ java
 
 plugin/packer_compiled.lua
 lazy-lock.json
-tests/
+# tests/
