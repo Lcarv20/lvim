@@ -6,7 +6,9 @@ require "lcarv.lsp.languages.sh"
 require "lcarv.lsp.languages.emmet"
 require "lcarv.lsp.languages.css"
 
-lvim.lsp.diagnostics.virtual_text = true
+-- lvim.lsp.diagnostics.virtual_text = true
+lvim.lsp.config({vvirtual_text = true})
+
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
   "java",
