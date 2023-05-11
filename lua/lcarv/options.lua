@@ -22,7 +22,22 @@ lvim.colorscheme = "darkplus"
 lvim.builtin.theme.lunar.options.style = "night"
 lvim.builtin.theme.lunar.options.dim_inactive = false
 
-lvim.lsp.diagnostics.float.focusable = true
+-- NOTE: This works
+-- lvim.lsp.diagnostics = {
+--   float = {
+--     focusable = true,
+--   }
+-- }
+
+vim.diagnostic.config({
+  float = {
+    flcauseable = true,
+  }
+})
+
+-- WARNING: BUG? ERROR?
+-- lvim.lsp.diagnostics.float.focusable = true
+
 lvim.reload_config_on_save = false
 -- lvim.builtin.illuminate.active = true
 -- lvim.builtin.alpha.active = true
@@ -151,6 +166,7 @@ vim.opt.shortmess:append "c"
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
+vim.opt.rnu = true
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]

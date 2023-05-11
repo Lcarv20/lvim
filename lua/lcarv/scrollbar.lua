@@ -85,7 +85,7 @@ require("scrollbar").setup {
     },
   },
   excluded_buftypes = {
-    "terminal",
+    "nofile"
   },
   excluded_filetypes = {
     "prompt",

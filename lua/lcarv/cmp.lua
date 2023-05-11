@@ -48,7 +48,7 @@ local function jumpable(dir)
       local n_next = node.next
       local next_pos = n_next and n_next.mark:pos_begin()
       local candidate = n_next ~= snippet and next_pos and (pos[1] < next_pos[1])
-        or (pos[1] == next_pos[1] and pos[2] < next_pos[2])
+          or (pos[1] == next_pos[1] and pos[2] < next_pos[2])
 
       -- Past unmarked exit node, exit early
       if n_next == nil or n_next == snippet.next then
@@ -92,6 +92,9 @@ local function jumpable(dir)
     return luasnip.in_snippet() and seek_luasnip_cursor_node() and luasnip.jumpable(1)
   end
 end
+lvim.builtin.cmp.sources["cmp_tw2css"] = {
+  { name = "tw2css" },
+}
 
 local cmp = require "cmp"
 local luasnip = require("lvim.utils.modules").require_on_index "luasnip"
@@ -127,4 +130,3 @@ lvim.builtin.cmp.mapping = cmp.mapping.preset.insert {
 
   ["<CR>"] = cmp.mapping.confirm { select = true }, -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 }
-
