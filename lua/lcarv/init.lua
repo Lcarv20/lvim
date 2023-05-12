@@ -25,4 +25,3 @@ reload("lcarv.zen-mode")
 reload("lcarv.lsp")
 reload("lcarv.neovide-opts")
 reload("lcarv.options")
--- vim.opt.relativenumber = true

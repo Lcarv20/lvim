@@ -128,8 +128,8 @@ lvim.plugins = {
         require("lsp_signature").setup({
           floating_window = true,
           hint_enable = false,
-          -- floating_window_off_x = 0,
-          -- floating_window_off_y = 4,
+          floating_window_off_x = 0,
+          floating_window_off_y = 4,
         })
         require("lsp_signature").on_attach()
       end,
@@ -157,13 +157,13 @@ lvim.plugins = {
     --   end,
     --   build = "./dl_binaries.sh",
     -- },
-    {
-      "tzachar/cmp-tabnine",
-      event = "InsertEnter",
-      after = "nvim-cmp",
-      dependencies = "hrsh7th/nvim-cmp",
-      build = "./install.sh",
-    },
+    -- {
+    --   "tzachar/cmp-tabnine",
+    --   event = "InsertEnter",
+    --   after = "nvim-cmp",
+    --   dependencies = "hrsh7th/nvim-cmp",
+    --   build = "./install.sh",
+    -- },
     "simrat39/symbols-outline.nvim",
     {
       "akinsho/flutter-tools.nvim",

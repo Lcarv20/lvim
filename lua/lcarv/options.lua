@@ -2,8 +2,8 @@ lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
 -- lvim.colorscheme = "onedark"
 -- lvim.colorscheme = "vscode"
--- lvim.colorscheme = "catppuccin"
--- lvim.colorscheme = "kanagawa"
+lvim.colorscheme = "catppuccin-mocha"
+-- lvim.colorscheme = "kanagawa-dragon"
 -- lvim.colorscheme = "carbonfox"
 -- lvim.colorscheme = "duskfox"
 -- lvim.colorscheme = "synthwave84"
@@ -16,31 +16,15 @@ lvim.format_on_save.enabled = false
 -- lvim.colorscheme = "rose-pine"
 -- lvim.colorscheme = "base16-material-darker"
 -- lvim.colorscheme = "oxocarbon"
-lvim.colorscheme = "darkplus"
+-- lvim.colorscheme = "darkplus"
 -- lvim.colorscheme = "github"
 
-lvim.builtin.theme.lunar.options.style = "night"
-lvim.builtin.theme.lunar.options.dim_inactive = false
+-- lvim.builtin.theme.lunar.options.style = "night"
+-- lvim.builtin.theme.lunar.options.dim_inactive = false
 
--- NOTE: This works
--- lvim.lsp.diagnostics = {
---   float = {
---     focusable = true,
---   }
--- }
-
-vim.diagnostic.config({
-  float = {
-    flcauseable = true,
-  }
-})
-
--- WARNING: BUG? ERROR?
--- lvim.lsp.diagnostics.float.focusable = true
-
-lvim.reload_config_on_save = false
--- lvim.builtin.illuminate.active = true
--- lvim.builtin.alpha.active = true
+-- lvim.reload_config_on_save = true
+lvim.builtin.illuminate.active = false
+lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 -- lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
@@ -51,7 +35,7 @@ lvim.builtin.dap.active = true
 -- lvim.builtin.terminal.direction = "tab"
 lvim.builtin.terminal.direction = "horizontal"
 -- lvim.keys.term_mode = { ["<C-l>"] = false }
--- lvim.builtin.cmp.cmdline.enable = false
+-- lvim.builtin.cmp.cmdline.enable = true
 lvim.builtin.cmp.window.documentation = {
   border = "rounded",
   winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
@@ -63,23 +47,6 @@ lvim.builtin.cmp.window.completion = {
 
 -- lvim.builtin.telescope.theme = "ivy"
 
-lvim.builtin.cmp.formatting.source_names = {
-  nvim_lsp = "(lsp)",
-  emoji = "(emoji)",
-  path = "(path)",
-  calc = "(calc)",
-  cmp_tabnine = "(tabnine)",
-  vsnip = "(vsnip)",
-  luasnip = "(luasnip)",
-  buffer = "(buffer)",
-  tmux = "(tmux)",
-  copilot = "(copilot)",
-  treesitter = "(treesitter)",
-  cmp_clippy = "(clippy)",
-}
-lvim.builtin.cmp.formatting = {
-  format = require("tailwindcss-colorizer-cmp").formatter,
-}
 vim.opt.showtabline = 0
 
 -- vim.opt.nu = true
@@ -149,13 +116,8 @@ local options = {
 
   title = true,
   -- colorcolumn = "80",
-  -- colorcolumn = "120",
+  colorcolumn = "120",
 }
--- vim.g.loaded_netrw = 1
--- vim.g.loaded_netrwPlugin = 1
--- vim.opt.fillchars.eob = " "
--- vim.opt.fillchars = vim.opt.fillchars + "vertleft: "
--- vim.opt.fillchars = vim.opt.fillchars + "vertright: "
 vim.opt.fillchars = vim.opt.fillchars + "eob: "
 vim.opt.fillchars:append {
   stl = " ",
@@ -170,7 +132,6 @@ vim.opt.rnu = true
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
--- vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
 vim.filetype.add {
   extension = {
