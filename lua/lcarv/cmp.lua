@@ -3,6 +3,10 @@ local has_words_before = function()
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match "%s" == nil
 end
 
+lvim.builtin.cmp.sources["cmp_tw2css"] = {
+  { name = "tw2css" },
+}
+
 local function jumpable(dir)
   local luasnip_ok, luasnip = pcall(require, "luasnip")
   if not luasnip_ok then
@@ -92,9 +96,6 @@ local function jumpable(dir)
     return luasnip.in_snippet() and seek_luasnip_cursor_node() and luasnip.jumpable(1)
   end
 end
-lvim.builtin.cmp.sources["cmp_tw2css"] = {
-  { name = "tw2css" },
-}
 
 local cmp = require "cmp"
 local luasnip = require("lvim.utils.modules").require_on_index "luasnip"

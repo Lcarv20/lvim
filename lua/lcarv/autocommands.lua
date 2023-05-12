@@ -4,6 +4,12 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
   end,
 })
 
+-- FIXME: this code bellow doesn't work
+vim.cmd [[
+autocmd CmdWinEnter * lua require('cmp').setup({enabled = false})
+autocmd CmdWinLeave * lua require('cmp').setup({enabled = true})
+]]
+
 vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = {
     "Jaq",
