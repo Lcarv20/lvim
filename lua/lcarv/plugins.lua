@@ -125,12 +125,12 @@ lvim.plugins = {
       "ray-x/lsp_signature.nvim",
       event = "BufRead",
       config = function()
-        require("lsp_signature").setup({
-          floating_window = true,
-          hint_enable = false,
-          floating_window_off_x = 0,
-          floating_window_off_y = 4,
-        })
+        -- require("lsp_signature").setup({
+        --   floating_window = true,
+        --   hint_enable = false,
+        --   floating_window_off_x = 0,
+        --   floating_window_off_y = 4,
+        -- })
         require("lsp_signature").on_attach()
       end,
     },
