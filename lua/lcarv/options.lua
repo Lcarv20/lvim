@@ -35,7 +35,8 @@ lvim.builtin.dap.active = true
 -- lvim.builtin.terminal.direction = "tab"
 lvim.builtin.terminal.direction = "horizontal"
 -- lvim.keys.term_mode = { ["<C-l>"] = false }
--- lvim.builtin.cmp.cmdline.enable = true
+lvim.builtin.cmp.cmdline.enable = true
+
 lvim.builtin.cmp.window.documentation = {
   border = "rounded",
   winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
