@@ -15,7 +15,7 @@ local opts = {
 }
 
 local mappings = {
-  C = {
+  j = {
     name = "Go",
     i = { "<cmd>GoInstallDeps<Cr>", "Install Go Dependencies" },
     f = { "<cmd>GoMod tidy<cr>", "Tidy" },

@@ -9,7 +9,7 @@ luasnip.filetype_extend("dart", { "flutter" })
 print("Dart file runs")
 -- setup which-key debug keymaps if debugging exists
 wk.register({
-  C = {
+  j = {
     name = "Flutter",
     c = { require('telescope').extensions.flutter.commands, "All commands" },
     s = { "<cmd>FlutterRun<CR>", "Flutter Run" },

@@ -189,5 +189,6 @@ lvim.plugins = {
         end, { expr = true })
       end,
     },
-  }
+  },
+  "joegesualdo/jsdoc.vim"
 }
