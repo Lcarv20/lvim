@@ -1,6 +1,8 @@
 lvim.plugins = {
   -- Colorschemes
   { "RRethy/nvim-base16" },
+  "voidekh/kyotonight.vim",
+  "projekt0n/github-nvim-theme",
   {
     "navarasu/onedark.nvim",
     config = function()
@@ -15,8 +17,21 @@ lvim.plugins = {
     end,
   },
   { "Mofiqul/vscode.nvim" },
-  { "catppuccin/nvim",    name = "catppuccin" },
-  { "rose-pine/neovim",   name = "rose-pine" },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    config = function()
+      require("catppuccin").setup {
+        -- custom_highlights = function(colors)
+        --   return {
+        --     ["@comment"] = { bg = colors.mantle},
+        --     -- ["@string"] = { fg = colors.green},
+        --   }
+        -- end
+      }
+    end
+  },
+  { "rose-pine/neovim", name = "rose-pine" },
   {
     "EdenEast/nightfox.nvim",
     opts = {
