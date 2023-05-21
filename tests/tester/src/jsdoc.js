@@ -7,7 +7,8 @@
  * @return {void} void
  */
 function getName(name) {
-  console.log(name)
+  let tempName = name.toUpperCase();
+  console.log(tempName)
 }
 
 
