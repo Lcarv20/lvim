@@ -21,7 +21,7 @@ local mappings = {
     r = { "<cmd>TypescriptRenameFile<Cr>", "RenameFile" },
     f = { "<cmd>TypescriptFixAll<Cr>", "FixAll" },
     g = { "<cmd>TypescriptGoToSourceDefinition<Cr>", "GoToSourceDefinition" },
-    d = { ":<C-u>call JSDocAdd()<CR>", "Add JSDoc" },
+    -- d = { ":<C-u>call JSDocAdd()<CR>", "Add JSDoc" },
   },
 }
 

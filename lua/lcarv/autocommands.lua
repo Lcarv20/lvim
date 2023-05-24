@@ -1,9 +1,3 @@
-vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
-  callback = function()
-    vim.cmd "set formatoptions-=cro"
-  end,
-})
-
 -- FIXME: this code bellow doesn't work
 vim.cmd [[
 autocmd CmdWinEnter * lua require('cmp').setup({enabled = false})
@@ -111,11 +105,11 @@ vim.api.nvim_create_autocmd({ "CmdWinEnter" }, {
   end,
 })
 
-vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
-  callback = function()
-    vim.cmd "set formatoptions-=cro"
-  end,
-})
+-- vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
+--   callback = function()
+--     vim.cmd "set formatoptions-=cro"
+--   end,
+-- })
 
 vim.api.nvim_create_autocmd({ "TextYankPost" }, {
   callback = function()

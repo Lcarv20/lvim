@@ -1,6 +1,16 @@
 lvim.plugins = {
   -- Colorschemes
   { "RRethy/nvim-base16" },
+  {
+    'maxmx03/dracula.nvim',
+    lazy = false,    -- make sure we load this during startup if it is your main colorscheme
+    priority = 1000, -- make sure to load this before all the other start plugins
+    config = function()
+      local dracula = require 'dracula'
+
+      dracula.setup()
+    end
+  },
   "voidekh/kyotonight.vim",
   "projekt0n/github-nvim-theme",
   {
@@ -55,8 +65,15 @@ lvim.plugins = {
   "roobert/tailwindcss-colorizer-cmp.nvim",
   "nvim-treesitter/playground",
   "nvim-treesitter/nvim-treesitter-textobjects",
+  {
+    "danymat/neogen",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    config = true,
+    -- Uncomment next line if you want to follow only stable versions
+    version = "*"
+  },
   "mfussenegger/nvim-jdtls",
-  -- "opalmay/vim-smoothie",
+  "opalmay/vim-smoothie",
   {
     "0x100101/lab.nvim",
     build = "cd js && npm ci",
@@ -205,5 +222,4 @@ lvim.plugins = {
       end,
     },
   },
-  "joegesualdo/jsdoc.vim"
 }
