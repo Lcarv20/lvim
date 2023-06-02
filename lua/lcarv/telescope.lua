@@ -129,7 +129,7 @@ lvim.builtin.telescope.defaults = {
   --   results = { " ", " ", " ", " ", " ", " ", " ", " " },
   --   preview = { " ", " ", " ", "▏", "▏", " ", " ", "▏" },
   -- },
-  winblend = 15,
+  -- winblend = 15,
   layout_strategy = "horizontal",
   show_line = false,
   layout_config = {
