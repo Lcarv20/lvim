@@ -1,22 +1,5 @@
 vim.g.smoothie_hide_cursor = 1
 
-
-local smoothie = require("smoothie")
-
--- Normal mode
--- vim.keymap.set("n", "<C-d>", function() smoothie.do("<C-D>") end)
--- vim.keymap.set('n', '<C-f>', function() smoothie.do("<C-F>") end)
--- vim.keymap.set("n", "<C-f>", function() smoothie.do("<C-F>") end)
--- vim.keymap.set("n", "<C-u>", function() smoothie.do("<C-U>") end)
--- vim.keymap.set("n", "<C-b>", function() smoothie.do("<C-B>") end)
-
--- -- Visual mode
--- vim.keymap.set("v", "<C-d>", function() smoothie.do("<C-D>") end)
--- vim.keymap.set("v", "<C-f>", function() smoothie.do("<C-F>") end)
--- vim.keymap.set("v", "<C-u>", function() smoothie.do("<C-U>") end)
--- vim.keymap.set("v", "<C-b>", function() smoothie.do("<C-B>") end)
-
-
 vim.api.nvim_set_keymap('n', '<C-d>', '<cmd>call smoothie#do("\\<C-D>")<CR>', { noremap = true })
 vim.api.nvim_set_keymap('v', '<C-d>', '<cmd>call smoothie#do("\\<C-D>")<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-f>', '<cmd>call smoothie#do("\\<C-F>")<CR>', { noremap = true })
