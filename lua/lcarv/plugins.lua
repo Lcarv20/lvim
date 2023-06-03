@@ -151,6 +151,8 @@ lvim.plugins = {
         }
       end,
     },
+    { "karb94/neoscroll.nvim" },
+
     { "christianchiarulli/telescope-tabs", branch = "chris" },
     "nvim-telescope/telescope-media-files.nvim",
     {
