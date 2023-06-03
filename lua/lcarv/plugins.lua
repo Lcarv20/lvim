@@ -41,6 +41,17 @@ lvim.plugins = {
       }
     end
   },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    priority = 1000,
+    lazy = false,
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    }
+  },
   { "rose-pine/neovim", name = "rose-pine" },
   {
     "EdenEast/nightfox.nvim",

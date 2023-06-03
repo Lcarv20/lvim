@@ -1,5 +1,7 @@
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
+lvim.builtin.lir.active = false
+lvim.builtin.nvimtree.active = false
 -- lvim.colorscheme = "onedark"
 -- lvim.colorscheme = "vscode"
 -- lvim.colorscheme = "catppuccin-mocha"
@@ -28,6 +30,8 @@ lvim.colorscheme = "tokyonight-night"
 -- lvim.builtin.theme.lunar.options.dim_inactive = false
 
 -- lvim.reload_config_on_save = true
+
+-- vim.g.loaded_netrw = 0
 lvim.builtin.illuminate.active = false
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"

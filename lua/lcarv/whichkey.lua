@@ -5,6 +5,18 @@ lvim.builtin.which_key.mappings["q"] = { '<cmd>lua require("lcarv.functions").sm
 lvim.builtin.which_key.mappings["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Comment" }
 -- lvim.builtin.which_key.mappings["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" }
 lvim.builtin.which_key.mappings["gy"] = "Link"
+lvim.builtin.which_key.mappings["e"] = { "<cmd>Neotree toggle<cr>", "Explorer" }
+lvim.builtin.which_key.mappings["E"] = {
+  name = "Neotree",
+  f = { "<cmd>Neotree float<cr>", "Set Float" },
+  t = { "<cmd>Neotree top<cr>", "Set Top" },
+  r = { "<cmd>Neotree right<cr>", "Set Right" },
+  l = { "<cmd>Neotree left<cr>", "Set Left" },
+  b = { "<cmd>Neotree bottom<cr>", "Set Bottom" },
+  B = { "<cmd>Neotree buffers<cr>", "Buffers" },
+  h = { "<cmd>Neotree git_status<cr>", "Git Status" },
+
+}
 lvim.builtin.which_key.mappings["r"] = {
   name = "Replace",
   r = { "<cmd>lua require('spectre').open()<cr>", "Replace" },
@@ -16,8 +28,8 @@ lvim.builtin.which_key.mappings["a"] = {
   c = { "<cmd>NeoAIToggle<cr>", "Toggle Chat" },
   p = { "<cmd>put c<cr>", "Paste Code" },
   P = { "<cmd>put g<cr>", "Paste Response" },
-  B = { [[:NeoAIInject ]], "In Buffer Response"},
-  b = { ":NeoAIInjectCode", "In Buffer Code Response"},
+  B = { [[:NeoAIInject ]], "In Buffer Response" },
+  b = { ":NeoAIInjectCode", "In Buffer Code Response" },
 }
 lvim.builtin.which_key.vmappings["a"] = {
   name = "[AI] ChatGPT",
@@ -164,7 +176,7 @@ lvim.builtin.which_key.mappings["o"] = {
 --   p = { "<cmd>Telekasten panel<cr>", "Panel" },
 --   t = { "<cmd>Telekasten toggle_todo<cr>", "Toggle Todo" },
 -- }
-lvim.builtin.which_key.mappings["u"] = {"<cmd>UndotreeToggle<cr>", "Undotree"}
+lvim.builtin.which_key.mappings["u"] = { "<cmd>UndotreeToggle<cr>", "Undotree" }
 lvim.builtin.which_key.mappings[";"] = nil
 
 lvim.builtin.which_key.mappings[";"] = nil
@@ -190,12 +202,12 @@ lvim.builtin.which_key.mappings["s"] = nil
 lvim.lsp.buffer_mappings.insert_mode["<C-h>"] = { vim.lsp.buf.signature_help, "Signature help" }
 
 local m_opts = {
-  mode = "n", -- NORMAL mode
+  mode = "n",     -- NORMAL mode
   prefix = "m",
-  buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-  silent = true, -- use `silent` when creating keymaps
+  buffer = nil,   -- Global mappings. Specify a buffer number for buffer local mappings
+  silent = true,  -- use `silent` when creating keymaps
   noremap = true, -- use `noremap` when creating keymaps
-  nowait = true, -- use `nowait` when creating keymaps
+  nowait = true,  -- use `nowait` when creating keymaps
 }
 
 local status_ok, which_key = pcall(require, "which-key")
