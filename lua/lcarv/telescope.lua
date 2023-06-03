@@ -148,6 +148,9 @@ lvim.builtin.telescope.pickers = {
     --   preview = { " ", " ", " ", "▏", "▏", " ", " ", "▏" },
     -- },
   },
+  live_grep = {
+    theme = "ivy",
+  }
 }
 
 
@@ -156,9 +159,9 @@ lvim.builtin.telescope.pickers.planets = {
   show_moon = true,
 }
 
-lvim.builtin.telescope.pickers.colorscheme = {
-  enable_preview = true,
-}
+-- lvim.builtin.telescope.pickers.colorscheme = {
+--   enable_preview = true,
+-- }
 
 require("telescope-tabs").setup {
   show_preview = false,

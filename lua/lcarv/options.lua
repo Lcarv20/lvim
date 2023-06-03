@@ -2,15 +2,55 @@ lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
 lvim.builtin.lir.active = false
 lvim.builtin.nvimtree.active = false
+lvim.builtin.bufferline.options.offsets = {
+  {
+    filetype = "neo-tree",
+    text = "Neo-tree",
+    highlight = "Directory",
+    text_align = "left",
+  },
+  {
+    filetype = "undotree",
+    text = "Undotree",
+    highlight = "PanelHeading",
+    padding = 1,
+  },
+  {
+    filetype = "NvimTree",
+    text = "Explorer",
+    highlight = "PanelHeading",
+    padding = 1,
+  },
+  {
+    filetype = "DiffviewFiles",
+    text = "Diff View",
+    highlight = "PanelHeading",
+    padding = 1,
+  },
+  {
+    filetype = "flutterToolsOutline",
+    text = "Flutter Outline",
+    highlight = "PanelHeading",
+  },
+  {
+    filetype = "lazy",
+    text = "Lazy",
+    highlight = "PanelHeading",
+    padding = 1,
+  },
+
+}
+-- lvim.builtin.bufferline.options.offsets = {
+-- }
 -- lvim.colorscheme = "onedark"
 -- lvim.colorscheme = "vscode"
 -- lvim.colorscheme = "catppuccin-mocha"
 -- lvim.colorscheme = "kanagawa-dragon"
 -- lvim.colorscheme = "carbonfox"
--- lvim.colorscheme = "duskfox"
+lvim.colorscheme = "duskfox"
 -- lvim.colorscheme = "synthwave84"
 -- lvim.colorscheme = "github_dark_colorblind"
-lvim.colorscheme = "tokyonight-night"
+-- lvim.colorscheme = "tokyonight-night"
 -- lvim.colorscheme = "tokyonight-moon"
 -- lvim.colorscheme = "lunar"
 -- lvim.colorscheme = "base16-tokyodark"
@@ -97,7 +137,7 @@ local options = {
   ignorecase = true,                       -- ignore case in search patterns
   mouse = "a",                             -- allow the mouse to be used in neovim
   pumheight = 10,                          -- pop up menu height
-  showmode = true,                        -- we don't need to see things like -- INSERT -- anymore
+  showmode = true,                         -- we don't need to see things like -- INSERT -- anymore
   showtabline = 0,                         -- always show tabs
   smartcase = true,                        -- smart case
   smartindent = true,                      -- make indenting smarter again

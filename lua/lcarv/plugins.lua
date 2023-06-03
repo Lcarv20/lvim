@@ -164,7 +164,12 @@ lvim.plugins = {
     },
     { "karb94/neoscroll.nvim" },
 
-    { "christianchiarulli/telescope-tabs", branch = "chris" },
+    -- { "christianchiarulli/telescope-tabs", branch = "chris" },
+    {
+      'nvim-telescope/telescope.nvim',
+      tag = '0.1.1',
+    },
+
     "nvim-telescope/telescope-media-files.nvim",
     {
       "ray-x/lsp_signature.nvim",

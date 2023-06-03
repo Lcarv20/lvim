@@ -15,7 +15,6 @@ lvim.builtin.which_key.mappings["E"] = {
   b = { "<cmd>Neotree bottom<cr>", "Set Bottom" },
   B = { "<cmd>Neotree buffers<cr>", "Buffers" },
   h = { "<cmd>Neotree git_status<cr>", "Git Status" },
-
 }
 lvim.builtin.which_key.mappings["r"] = {
   name = "Replace",
@@ -51,11 +50,12 @@ lvim.builtin.which_key.mappings["x"] = {
   x = { "<cmd>lua require'dap'.terminate()<cr>", "Exit" },
 }
 
+local telescope = require("telescope.builtin")
 lvim.builtin.which_key.mappings["f"] = {
   name = "Find",
   b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
   d = { "<cmd>Telescope diagnostics<cr>", "Diagnostics" },
-  c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
+    c = { function () telescope.colorscheme({enable_preview = true}) end, "[C]olorschemes"},
   f = { "<cmd>Telescope find_files<cr>", "Find files" },
   t = { "<cmd>Telescope live_grep<cr>", "Find Text" },
   s = { "<cmd>Telescope grep_string<cr>", "Find String" },
